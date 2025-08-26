@@ -1,6 +1,6 @@
 ---
 title: My first steps in Generative Art
-date: 2025-08-25
+date: 2025-08-23
 excerpt: When Algorithms Create vs. When AI Imagines
 tags: [art, coding]
 cover: /images/flocking_simulation.gif
@@ -19,6 +19,8 @@ This is flocking simulation is something else. The \***\*“intelligence” here
 All in all, it was fun, it was cool, and it opened a door. Now the real question is: \***\*what comes next?\*\***
 
 ---
+
+### Resources:
 
 Below are some interesting \***\*resources\*\*** I read and watched for making this. If you have the time i recommend skimming through them all, they're very interesting!
 
