@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllTags, getPostsByTag } from "@/lib/posts";
 
 export default function TagsPage() {
@@ -49,9 +50,11 @@ export default function TagsPage() {
                         )}
                       </div>
                       {meta.cover && (
-                        <img
+                        <Image
                           src={meta.cover}
                           alt={meta.title}
+                          width={96}
+                          height={64}
                           className="w-24 h-16 object-cover rounded flex-shrink-0"
                         />
                       )}

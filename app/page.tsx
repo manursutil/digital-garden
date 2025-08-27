@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "@/lib/posts";
 
 export const dynamic = "error";
@@ -35,9 +36,11 @@ export default function Home() {
                 className="grid grid-cols-[160px_1fr] gap-4 items-start"
               >
                 {meta.cover ? (
-                  <img
+                  <Image
                     src={meta.cover}
                     alt={meta.title}
+                    width={160}
+                    height={128}
                     className="w-[160px] h-32 object-cover rounded"
                   />
                 ) : (

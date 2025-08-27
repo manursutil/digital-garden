@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getPostsByTag, getAllTags } from "@/lib/posts";
 import { notFound } from "next/navigation";
 
@@ -32,7 +33,8 @@ export default async function TagPage({ params }: Props) {
         </Link>
         <h1 className="text-3xl font-bold mt-2">#{tag}</h1>
         <p className="text-lg opacity-80 dark:opacity-90 mt-2">
-          {posts.length} post{posts.length !== 1 ? "s" : ""} tagged with "{tag}"
+          {posts.length} post{posts.length !== 1 ? "s" : ""} tagged with &ldquo;
+          {tag}&rdquo;
         </p>
       </div>
 
@@ -43,9 +45,11 @@ export default async function TagPage({ params }: Props) {
             className="grid grid-cols-[160px_1fr] gap-4 items-start"
           >
             {meta.cover ? (
-              <img
+              <Image
                 src={meta.cover}
                 alt={meta.title}
+                width={160}
+                height={128}
                 className="w-[160px] h-32 object-cover rounded"
               />
             ) : (
