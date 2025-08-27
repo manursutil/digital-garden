@@ -10,7 +10,9 @@ export default function Home() {
 
   return (
     <main className="container-narrow pb-16">
-      <p className="mt-3 opacity-80">Welcome to my Digital Garden!</p>
+      <p className="mt-3 opacity-80 dark:opacity-90">
+        Welcome to my Digital Garden!
+      </p>
 
       <section className="mt-10">
         <h2 className="text-2xl font-bold inline-block accent-underline">
@@ -18,8 +20,12 @@ export default function Home() {
         </h2>
 
         {posts.length === 0 ? (
-          <p className="mt-6 opacity-70">
-            No posts yet. Add some in <code>content/posts</code>.
+          <p className="mt-6 opacity-70 dark:opacity-80">
+            No posts yet. Add some in{" "}
+            <code className="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
+              content/posts
+            </code>
+            .
           </p>
         ) : (
           <ul className="mt-6 space-y-8">
@@ -42,18 +48,32 @@ export default function Home() {
                   <h3 className="text-xl font-semibold">
                     <Link
                       href={`/blog/${slug}`}
-                      className="accent-underline hover:border-red-400"
+                      className="accent-underline hover:border-red-400 dark:hover:border-red-300"
                     >
                       # {meta.title}
                     </Link>
                   </h3>
 
-                  <div className="mt-1 text-sm opacity-70">
+                  <div className="mt-1 text-sm opacity-70 dark:opacity-80">
                     {new Date(meta.date).toLocaleDateString()}
                   </div>
 
+                  {meta.tags && meta.tags.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {meta.tags.map((tag) => (
+                        <Link
+                          key={tag}
+                          href={`/tags/${tag}`}
+                          className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        >
+                          #{tag}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
                   {meta.excerpt && (
-                    <p className="mt-2 leading-relaxed opacity-90">
+                    <p className="mt-2 leading-relaxed opacity-90 dark:opacity-95">
                       {meta.excerpt}
                     </p>
                   )}

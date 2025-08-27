@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "media",
   theme: {
     extend: {
       fontFamily: {
@@ -20,15 +21,13 @@ module.exports = {
         DEFAULT: {
           css: {
             p: {
-              'margin-top': '1.25em',
-              'margin-bottom': '1.25em',
+              "margin-top": "1.25em",
+              "margin-bottom": "1.25em",
             },
           },
         },
       }),
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

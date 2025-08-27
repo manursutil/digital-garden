@@ -39,3 +39,15 @@ export function getAllPosts() {
   );
   return posts;
 }
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const allTags = posts.flatMap((post) => post.meta.tags || []);
+  const uniqueTags = [...new Set(allTags)].sort();
+  return uniqueTags;
+}
+
+export function getPostsByTag(tag: string) {
+  const posts = getAllPosts();
+  return posts.filter((post) => post.meta.tags?.includes(tag));
+}
