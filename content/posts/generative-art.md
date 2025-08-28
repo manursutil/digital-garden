@@ -10,7 +10,7 @@ A couple of weeks ago I stumbled onto a TikTok of artists using code to create v
 
 From there the YouTube algorithm took the lead and did what it does best: recommend me one video after another. First came quadtrees, then a flocking simulation based on “boids”, and at some point I thought, \***\*why not make them myself?\*\*** That’s how I ended up with this little experiment you can see in the gif attached to this post.
 
-It couldn't be too difficult, I thought. I already knew some Python and JavaScript, the usual loops, functions, object-oriented stuff. I’d call myself intermediate. But this was the first time I coded something that felt alive. On the screen it looked like a flock of birds crossing the sky, each one moving independently, but somehow together.
+It couldn't be too difficult, I thought. I already knew some Python and JavaScript, the usual loops, functions, object-oriented stuff. But this was the first time I coded something that felt alive. On the screen it looked like a flock of birds crossing the sky, each one moving independently, but somehow together.
 
 What struck me most is how much this \***\*changed the way I think about art\*\***. When people talk about AI art today, it’s usually about prompts. You type in a sentence, a black-box model spits out an image. The creative process feels external, in the billions of parameters, in the data it was trained on. You, the “artist”, don’t really touch the process, only the input and the output and change the prompt if you don't like it.
 
